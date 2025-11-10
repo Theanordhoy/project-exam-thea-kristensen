@@ -1,0 +1,56 @@
+/* Desktop */
+@media (min-width: 1025px) {
+    /* Header */
+    .header-hamburger__menu {
+        display: none;
+    }
+
+    .header-categories {
+        display: flex;
+        background: none;
+        position: static;
+        order: 2;
+        padding: 0;
+        width: auto;
+    }
+
+    .header-categories li {
+        margin: 0;
+        border: none;
+        padding: 0;
+        width: auto;
+    }
+
+    .header-logo {
+        order: 1;
+        font-size: var(--font-size-logo-desktop);
+    }
+
+    .header-icons {
+        order: 3;
+    }
+
+    .header-logo-2 {
+        margin-left: 30px;
+    }
+
+    /* Footer */
+    .footer-logo-2 {
+        margin-left: 30px;
+    }
+
+    .footer-desktop {
+        background-color: var(--secondary-color);
+        color: var(--color-white);
+        flex-direction: row;
+        width: 100%;
+        font-family: var(--secondary-font);
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        padding: 40px 0px;
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+}

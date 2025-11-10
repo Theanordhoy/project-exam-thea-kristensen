@@ -1,0 +1,221 @@
+/* Variables */
+:root {
+    /* Colors */
+    --primary-color: #EFE8DF;
+    --primary-color-hover: #DCCFBF;
+
+    --secondary-color: #2B3134;
+    --secondary-color-hover: #1E2427;
+
+    --accent-color: #8E5B4D;
+    --accent-color-hover: #7B4F42;
+
+    --text-color: #333333;
+    --color-white: #FFFFFF;
+
+    --error-color: #E32235;
+    --success-color: #24A943;
+
+    /* Fonts */
+    --primary-font: "Raleway", sans-serif;
+    --secondary-font: "Nunito Sans", sans-serif;
+
+    --font-weight-extra-light: 200;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --font-size-logo-desktop: 2.25rem;
+    --font-size-logo-mobile: 1.75rem; 
+    --font-size-h1: 2rem; /* 32px */
+    --font-size-h2: 1.5rem; /* 24px */
+    --font-size-h3: 1.25rem; /* 20px */
+    --font-size-body-xlarge: 1.125rem; /* 18px */
+    --font-size-body-large: 1rem; /* 16px */
+    --font-size-body-medium: 0.875rem; /* 14px */
+    --font-size-body-small: 0.813rem; /* 13px */
+    --font-size-xsmall: 0.75rem; /* 12px */
+    --font-size-mini: 0.625rem; /* 10px */
+
+}
+
+body {
+    margin: 0;
+}
+
+/* Header */
+.header {
+    border-bottom: 1px solid var(--accent-color);
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+.header,
+.header-logo,
+.header-categories,
+.header-icons {
+    display: flex;
+}
+
+.header-logo,
+.header-categories__option {
+    font-family: var(--primary-font);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+}
+
+.header-logo {
+    font-size: var(--font-size-logo-mobile);
+    color: var(--secondary-color);
+    flex-direction: column;
+    line-height: 0.8;
+}
+
+.header-logo-2 {
+    margin-left: 23px;
+}
+
+.header-categories {
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    position: absolute;
+    background-color: var(--primary-color);
+    top: 66px;
+    left: 0;
+    width: 100%;
+    padding: 40px 10px 60px 10px;
+}
+
+.header-categories li {
+    margin-bottom: 15px;
+    border-bottom: solid 1px var(--accent-color);
+    padding-bottom: 15px;
+    width: 90%;
+}
+
+.header-categories__option {
+    font-size: var(--font-size-body-large);
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.header-icons {
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.fa-solid {
+    color: var(--secondary-color);
+}
+
+.header-categories,
+#menu-checkbox {
+    list-style: none;
+    display: none;
+}
+
+#menu-checkbox:checked ~ .header-categories {
+    display: block;
+}
+
+.header-hamburger__menu {
+    align-self: center;
+    cursor: pointer;
+    font-size: var(--font-size-h1);
+}
+
+/* Footer */
+.footer-logo,
+.footer-follow-us,
+.footer-socials,
+.footer-about-us,
+.footer-option {
+    display: flex;
+}
+
+.footer-desktop {
+    display: none;
+}
+
+.footer-logo {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-logo-mobile);
+    flex-direction: column;
+    line-height: 0.8;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo-2 {
+    margin-left: 23px;
+}
+
+.footer-follow-us,
+.footer-about-us {
+    flex-direction: column;
+    
+}
+
+.footer-socials {
+    flex-direction: column;
+}
+
+.footer-icon,
+.footer-option {
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.fa-brands,
+.footer-icon,
+.footer-option {
+    color: var(--color-white);
+    font-size: var(--font-size-body-small);
+    font-weight: var(--font-weight-regular);
+}
+
+.fa-brands {
+    margin-right: 8px;
+}
+
+.footer-header {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-body-medium);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.footer-mobile {
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+    font-family: var(--secondary-font);
+    padding: 20px 0px 40px 0px;
+}
+
+.footer-mobile__header {
+    padding: 15px 0px;
+    font-size: var(--font-size-body-small);
+}
+
+.footer-mobile__dropdown {
+    align-self: center;
+    margin: 10px 0;
+    border-bottom: solid 1px var(--color-white);
+    border-top: solid 1px var(--color-white);
+    width: 90%;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.footer-mobile__logo {
+    margin: 20px 0px;
+}
