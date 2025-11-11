@@ -1,3 +1,8 @@
+/* Mobile */
+@media (max-width: 768px) {
+   
+}
+
 /* Desktop */
 @media (min-width: 1025px) {
     /* Header */
@@ -36,7 +41,7 @@
 
     /* Footer */
     .footer-logo-2 {
-        margin-left: 30px;
+        margin-left: 45px;
     }
 
     .footer-desktop {
@@ -52,5 +57,10 @@
 
     .footer-mobile {
         display: none;
+    }
+
+    /* Success Page */
+    .success-info {
+        width: 500px;
     }
 }

@@ -44,6 +44,13 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-family: var(--primary-font);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-h1);
+    color: var(--text-color);
+}
+
 /* Header */
 .header {
     border-bottom: 1px solid var(--accent-color);
@@ -87,6 +94,7 @@ body {
     left: 0;
     width: 100%;
     padding: 40px 10px 60px 10px;
+    z-index: 3;
 }
 
 .header-categories li {
@@ -154,7 +162,7 @@ body {
 }
 
 .footer-logo-2 {
-    margin-left: 23px;
+    margin-left: 45px;
 }
 
 .footer-follow-us,
