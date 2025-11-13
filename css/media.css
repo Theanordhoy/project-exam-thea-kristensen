@@ -1,5 +1,44 @@
 /* Mobile */
 @media (max-width: 768px) {
+    /* Index */
+    .hero-content {
+        height: 400px;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-body-large);
+    }
+
+    .hero-arrow-left,
+    .hero-arrow-right {
+        font-size: var(--font-size-h3);
+        top: 28%;
+    }
+
+    .thumbnail {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+    }
+
+    .thumbnail-product-card {
+        width: 180px;
+    }
+
+    .thumbnail-image {
+        height: 180px;
+    }
+
+    .thumbnail-content {
+        font-size: var(--font-size-body-medium);
+    }
+
+    .homepage-header {
+        margin: 50px 0px 0px 30px;
+    }
    
 }
 

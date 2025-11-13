@@ -18,7 +18,6 @@ async function getProducts() {
 
         // filter() from module 3 in JavaScript https://mollify.noroff.dev/content/feu1/javascript-1/module-3/array-methods?nav=course
         const carouselProducts = products.filter(product => product.title === "Black watch" || product.title === "Black headphones" || product.title === "White sneakers");
-        console.log("Carousel products:", carouselProducts);
 
         carouselProducts.forEach(products => {
             const heroContent = document.createElement("div");
@@ -36,6 +35,10 @@ async function getProducts() {
             heroContent.appendChild(image);
             heroContent.appendChild(title);
             heroCarousel.appendChild(heroContent);
+
+            title.addEventListener("click", () => {
+                window.location.href = `html/product.html?id=${products.id}`;
+            });
         });
 
         // Carousel made with help from https://www.w3schools.com/howto/howto_js_slideshow.asp 
@@ -69,6 +72,7 @@ async function getProducts() {
             nextImage(-1);
         })
 
+        // Thumbnail grid of the first 12 products
         for (let i = 0; i <= 11; i++) {
             const product = products[i];
             const thumbnailCard = document.createElement("div");
@@ -77,6 +81,7 @@ async function getProducts() {
             const thumbnailTitle = document.createElement("h3");
             const thumbnailPrice = document.createElement("p");
             const thumbnailDiscountedPrice = document.createElement("p");
+            const anchorButton = document.createElement("a");
 
             thumbnailCard.className = "thumbnail-product-card";
             thumbnailImage.className = "thumbnail-image";
@@ -90,13 +95,16 @@ async function getProducts() {
             thumbnailTitle.textContent = product.title;
             thumbnailPrice.textContent = `$${product.price}`;
             thumbnailDiscountedPrice.textContent = `$${product.discountedPrice}`;
+            anchorButton.href = `html/product.html?id=${product.id}`;
 
             thumbnailContent.appendChild(thumbnailTitle);
             thumbnailContent.appendChild(thumbnailPrice);
             thumbnailContent.appendChild(thumbnailDiscountedPrice);
             thumbnailCard.appendChild(thumbnailImage);
             thumbnailCard.appendChild(thumbnailContent);
-            thumbnail.appendChild(thumbnailCard);
+            anchorButton.appendChild(thumbnailCard);
+            thumbnail.appendChild(anchorButton);
+            
         };
 
     } catch (error) {
@@ -104,5 +112,7 @@ async function getProducts() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    getProducts();
+});
 
-getProducts();

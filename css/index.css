@@ -61,7 +61,8 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 20px 20px 60px 20px;
+    justify-items: center;
 }
 
 .thumbnail-product-card {
@@ -85,5 +86,37 @@ main {
 .thumbnail-content {
     font-family: var(--secondary-font);
     color: var(--text-color);
+    font-size: var(--font-size-h3);
+    display: grid;
+    padding: 0px 15px;
+}
 
+.thumbnail-title {
+    font-weight: var(--font-weight-bold);
+    margin: 10px 0px 0px 0px;
+    font-size: var(--font-size-h3);
+}
+
+.thumbnail-price {
+    grid-column: 1;
+    font-weight: var(--font-weight-extra-light);
+    text-decoration: line-through;
+}
+
+.thumbnail-price__discounted {
+    grid-column: 2;
+    font-weight: var(--font-weight-semibold);
+}
+
+.thumbnail-price__discounted,
+.thumbnail-price {
+    margin: 10px 0px 15px 0px;
+}
+
+.homepage-header {
+    margin: 50px 0px 0px 40px;
+}
+
+a {
+    text-decoration: none;
 }

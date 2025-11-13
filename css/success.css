@@ -16,7 +16,7 @@ main,
     padding: 50px 20px;
     font-family: var(--secondary-font);
     font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-regular);
+    font-size: var(--font-size-body-large);
     color: var(--text-color);
 }
 
