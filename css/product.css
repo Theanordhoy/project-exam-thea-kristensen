@@ -1,0 +1,26 @@
+.product-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 50px;
+    padding: 40px;
+}
+
+.product-image {
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+}
+
+.product-tags {
+    border: 1px solid var(--accent-color);
+    width: fit-content;
+    padding: 5px 10px;
+    text-transform: capitalize;
+}
+
+.product-prices {
+    display: flex;
+    gap: 20px;
+    font-size: var(--font-size-h3);
+}
+

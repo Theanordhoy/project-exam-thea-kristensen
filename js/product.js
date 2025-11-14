@@ -17,10 +17,12 @@ async function getProductById() {
 
         const productContent = document.createElement("div");
         const productImage = document.createElement("img");
+        const productInfo = document.createElement("div");
         const productTitle = document.createElement("h1");
         const productRating = document.createElement("p");
         const productDescription = document.createElement("p");
         const productTags = document.createElement("p");
+        const productPrices = document.createElement("div");
         const productPrice = document.createElement("h3");
         const productDiscountedPrice = document.createElement("h3");
         const addToCartButton = document.createElement("button");
@@ -33,10 +35,12 @@ async function getProductById() {
 
         productContent.className = "product-content";
         productImage.className = "product-image";
+        productInfo.className = "product-info";
         productTitle.className = "product-title";
         productRating.className = "product-rating";
         productDescription.className = "product-description";
         productTags.className = "product-tags";
+        productPrices.className = "product-prices";
         productPrice.className = "product-price";
         productDiscountedPrice.className = "product-discounted-price";
         addToCartButton.className = "add-to-cart-button";
@@ -56,24 +60,33 @@ async function getProductById() {
         productPrice.textContent = `$${product.price}`;
         productDiscountedPrice.textContent = `$${product.discountedPrice}`;
         addToCartButton.textContent = "Add to cart";
-        reviewTitle.textContent = `Reviews ${product.reviews.length}`;
-        reviewUsername.textContent = product.reviews[0].username;
-        reviewStars.textContent = ` ${product.reviews[0].rating} `;
-        reviewDescription.textContent = product.reviews[0].description;
 
-        productReview.appendChild(reviewTitle);
-        productReview.appendChild(reviewUsername);
-        productReview.appendChild(reviewStars);
-        productReview.appendChild(reviewDescription);
+        if (product.reviews && product.reviews.length > 0) {
+            reviewTitle.textContent = `Reviews ${product.reviews.length}`;
+            reviewUsername.textContent = product.reviews[0].username;
+            reviewStars.textContent = ` ${product.reviews[0].rating} `;
+            reviewDescription.textContent = product.reviews[0].description;
+
+            productReview.appendChild(reviewTitle);
+            productReview.appendChild(reviewUsername);
+            productReview.appendChild(reviewStars);
+            productReview.appendChild(reviewDescription);
+        } else {
+            reviewTitle.textContent = "No reviews yet.";
+            productReview.appendChild(reviewTitle);
+        };
+        
         productContent.appendChild(productImage);
-        productContent.appendChild(productTitle);
-        productContent.appendChild(productRating);
-        productContent.appendChild(productDescription);
-        productContent.appendChild(productTags);
-        productContent.appendChild(productPrice);
-        productContent.appendChild(productDiscountedPrice);
-        productContent.appendChild(addToCartButton);
-        productContent.appendChild(shareProduct);
+        productInfo.appendChild(productTitle);
+        productInfo.appendChild(productRating);
+        productInfo.appendChild(productDescription);
+        productInfo.appendChild(productTags);
+        productPrices.appendChild(productPrice);
+        productPrices.appendChild(productDiscountedPrice);
+        productInfo.appendChild(productPrices);
+        productInfo.appendChild(addToCartButton);
+        productInfo.appendChild(shareProduct);
+        productContent.appendChild(productInfo);
         productContent.appendChild(productReview);
         productContainer.appendChild(productContent);
 

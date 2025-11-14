@@ -39,7 +39,6 @@ main {
     position: absolute;
     top: 80%;
     left: 7%;
-    font-family: var(--primary-font);
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-h2);
     text-transform: uppercase;
@@ -84,7 +83,6 @@ main {
 }
 
 .thumbnail-content {
-    font-family: var(--secondary-font);
     color: var(--text-color);
     font-size: var(--font-size-h3);
     display: grid;
@@ -99,13 +97,10 @@ main {
 
 .thumbnail-price {
     grid-column: 1;
-    font-weight: var(--font-weight-extra-light);
-    text-decoration: line-through;
 }
 
 .thumbnail-price__discounted {
     grid-column: 2;
-    font-weight: var(--font-weight-semibold);
 }
 
 .thumbnail-price__discounted,

@@ -14,7 +14,6 @@ main,
     border: solid 1px var(--accent-color);
     flex-direction: column;
     padding: 50px 20px;
-    font-family: var(--secondary-font);
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-body-large);
     color: var(--text-color);
