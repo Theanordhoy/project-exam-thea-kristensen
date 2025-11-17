@@ -25,13 +25,24 @@ async function getProductById() {
         const productPrices = document.createElement("div");
         const productPrice = document.createElement("h3");
         const productDiscountedPrice = document.createElement("h3");
-        const addToCartButton = document.createElement("button");
         const shareProduct = document.createElement("i");
+        const addToCartButton = document.createElement("button");
         const productReview = document.createElement("div");
         const reviewTitle = document.createElement("p");
         const reviewUsername = document.createElement("p");
         const reviewStars = document.createElement("i");
         const reviewDescription = document.createElement("p");
+
+        //function toStarRating(rating) {
+            //for (let i = 0; i < 5; i++) {
+                //const reviewStars = document.createElement("i");
+                //if (i < rating) {
+                    //star.className = "fa-solid fa-star filled-star";
+                //} else {
+                    //star.className = "fa-regular fa-star empty-star";
+                //}
+            //}
+        //}
 
         productContent.className = "product-content";
         productImage.className = "product-image";
@@ -84,8 +95,8 @@ async function getProductById() {
         productPrices.appendChild(productPrice);
         productPrices.appendChild(productDiscountedPrice);
         productInfo.appendChild(productPrices);
+        productPrices.appendChild(shareProduct);
         productInfo.appendChild(addToCartButton);
-        productInfo.appendChild(shareProduct);
         productContent.appendChild(productInfo);
         productContent.appendChild(productReview);
         productContainer.appendChild(productContent);
@@ -97,3 +108,9 @@ async function getProductById() {
 }
 
 getProductById();
+
+function addToCart (product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+}

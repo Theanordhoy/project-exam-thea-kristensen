@@ -57,7 +57,9 @@ h1,
 .header-categories__option,
 .footer-logo,
 .add-to-cart-button,
-.hero-title {
+.hero-title,
+.login-form__signup,
+.register-form__login {
     font-family: var(--primary-font);
 }
 
@@ -65,7 +67,9 @@ h1,
 .thumbnail-content,
 .success-info,
 .product-info,
-.product-review {
+.product-review,
+.login-form__input,
+.register-form__input {
     font-family: var(--secondary-font);
 }
 
@@ -250,12 +254,113 @@ h1,
     margin: 20px 0px;
 }
 
+/* Login and Signup pages */
+.login-container,
+.register-container {
+    background-color: var(--primary-color);
+    height: 100vh;
+}
+
+.login-form,
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.login-form__field,
+.register-form__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form__input,
+.register-form__input {
+    height: 48px;
+    border: 1px solid var(--accent-color);
+    border-radius: 0px;
+    padding: 0px 0px 0px 10px;
+    font-size: var(--font-size-body-large);
+}
+
+.login-h1,
+.register-h1 {
+    margin: 0;
+    text-align: center;
+    padding: 60px 0px;
+}
+
+.login-form__signup,
+.register-form__login {
+    border: 1px solid var(--accent-color);
+    padding: 12px;
+    text-align: center;
+    font-size: var(--font-size-h3);
+    margin: 10px 0px;
+}
+
+.login-form__signup a,
+.register-form__login a {
+    text-decoration: none;
+    font-weight: var(--font-weight-semibold);
+    padding: 0px 0px 0px 5px;
+}
+
+.login-form__signup a,
+.login-form__signup,
+.login-form__input::placeholder,
+.register-form__login a,
+.register-form__login,
+.register-form__input::placeholder {
+    color: var(--text-color);
+}
+
+.register-form__name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.register-input__name {
+    width: 183px;
+}
+
 /* Buttons */
-.add-to-cart-button {
+.add-to-cart-button,
+.login-button,
+.register-button {
     background-color: var(--secondary-color);
     color: var(--color-white);
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-h2);
     width: 400px;
-    height: 60px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.add-to-cart-button:hover,
+.login-button:hover,
+.register-button:hover {
+    background-color: var(--secondary-color-hover);
+}
+
+.register-form__login:hover,
+.register-form__login:hover a,
+.login-form__signup:hover,
+.login-form__signup:hover a {
+    background-color: var(--accent-color-hover);
+    color: var(--color-white); 
+}
+
+/* Screen reader only */
+/* https://css-tricks.com/inclusively-hidden/ */
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }

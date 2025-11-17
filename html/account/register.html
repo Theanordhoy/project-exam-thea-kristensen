@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="js/index.js" type="module" defer></script>
+    <title>Register</title>
+    <script src="../../js/register.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/309152690f.js" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io-3/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io-3/favicon-32x32.png">
@@ -22,25 +22,55 @@
             <label for="menu-checkbox" class="header-hamburger__menu" id="hamburger-icon"><i class="fa-solid fa-bars"></i></label>
             <input type="checkbox" id="menu-checkbox">
             <ul class="header-categories">
-                <li><a href="html/coming-soon.html" class="header-categories__option">Beauty</a></li>
-                <li><a href="html/coming-soon.html" class="header-categories__option">Technology</a></li>
-                <li><a href="html/coming-soon.html" class="header-categories__option">Shoes</a></li>
-                <li><a href="html/coming-soon.html" class="header-categories__option">Accessories</a></li>
-                <li><a href="html/coming-soon.html" class="header-categories__option">Lunex Living</a></li>
+                <li><a href="../../html/coming-soon.html" class="header-categories__option">Beauty</a></li>
+                <li><a href="../../html/coming-soon.html" class="header-categories__option">Technology</a></li>
+                <li><a href="../../html/coming-soon.html" class="header-categories__option">Shoes</a></li>
+                <li><a href="../../html/coming-soon.html" class="header-categories__option">Accessories</a></li>
+                <li><a href="../../html/coming-soon.html" class="header-categories__option">Lunex Living</a></li>
             </ul>
             <a href="../../index.html" class="header-logo">
                 <span class="header-logo-1">lunex</span>
                 <span class="header-logo-2">living</span> 
             </a>
             <div class="header-icons">
-                <a href="html/coming-soon.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="html/account/login.html"><i class="fa-solid fa-user"></i></a>
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="../../html/coming-soon.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="../account/login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="../../html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
     </header>
     <main>
-
+        <section class="register-container">
+            <h1 class="register-h1">Register</h1>
+            <form id="registerForm" class="register-form">
+                <div class="register-form__name-fields">
+                    <div class="register-form__field">
+                        <label for="firstname" class="sr-only">First name</label>
+                        <input type="text" id="firstname" name="firstname" class="register-form__input register-input__name" placeholder="First name" required>
+                    </div>
+                    <div class="register-form__field">
+                        <label for="lastname" class="sr-only">Last name</label>
+                        <input type="text" id="lastname" name="lastname" class="register-form__input register-input__name" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div class="register-form__field">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" class="register-form__input" placeholder="Email" required>
+                </div>
+                <div class="register-form__field">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" id="password" name="password" class="register-form__input" placeholder="Password" required>
+                </div>
+                <div class="register-form__field">
+                    <label for="confirmpassword" class="sr-only">Confirm password</label>
+                    <input type="password" id="confirmpassword" name="confirmpassword" class="register-form__input" placeholder="Confirm password" required>
+                </div>
+                <div class="register-form__buttons">
+                    <button type="submit" class="register-button">Register</button>
+                    <p class="register-form__login">Already have an account?<a href="login.html">Log in</a></p>
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <!-- Footer desktop-->  
@@ -52,19 +82,19 @@
             <div class="footer-follow-us">
                 <p class="footer-header">Follow us</p>
                 <div class="footer-socials">
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-tiktok"></i>TikTok</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-youtube"></i>YouTube</a>
+                    <a href="../../html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                    <a href="../../html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                    <a href="../../html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-tiktok"></i>TikTok</a>
+                    <a href="../../html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-youtube"></i>YouTube</a>
                 </div>
             </div>
             <div class="footer-about-us">
                 <p class="footer-header">About us</p>
                 <div class="footer-options">
-                    <a href="html/coming-soon.html" class="footer-option">Lunex Living</a>
-                    <a href="html/coming-soon.html" class="footer-option">FAQ</a>
-                    <a href="html/coming-soon.html" class="footer-option">Returns</a>
-                    <a href="html/coming-soon.html" class="footer-option">Terms and conditions</a>
+                    <a href="../../html/coming-soon.html" class="footer-option">Lunex Living</a>
+                    <a href="../../html/coming-soon.html" class="footer-option">FAQ</a>
+                    <a href="../../html/coming-soon.html" class="footer-option">Returns</a>
+                    <a href="../../html/coming-soon.html" class="footer-option">Terms and conditions</a>
                 </div>
             </div>
         </div>
@@ -77,19 +107,19 @@
             <details class="footer-mobile__dropdown">
                 <summary class="footer-header footer-mobile__header">Follow us</summary>
                 <div class="footer-socials">
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-tiktok"></i>TikTok</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-youtube"></i>YouTube</a>
+                    <a href="../../html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                    <a href="../../html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                    <a href="../../html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-tiktok"></i>TikTok</a>
+                    <a href="../../html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-youtube"></i>YouTube</a>
                 </div>    
             </details>
             <details class="footer-mobile__dropdown">
                 <summary class="footer-header footer-mobile__header">About us</summary>
                 <div class="footer-options">
-                    <a href="html/coming-soon.html" class="footer-option">Lunex Living</a>
-                    <a href="html/coming-soon.html" class="footer-option">FAQ</a>
-                    <a href="html/coming-soon.html" class="footer-option">Returns</a>
-                    <a href="html/coming-soon.html" class="footer-option">Terms and conditions</a>
+                    <a href="../../html/coming-soon.html" class="footer-option">Lunex Living</a>
+                    <a href="../../html/coming-soon.html" class="footer-option">FAQ</a>
+                    <a href="../../html/coming-soon.html" class="footer-option">Returns</a>
+                    <a href="../../html/coming-soon.html" class="footer-option">Terms and conditions</a>
                 </div>
             </details>
         </div>
