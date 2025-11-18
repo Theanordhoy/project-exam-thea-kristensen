@@ -101,6 +101,18 @@ async function getProductById() {
         productContent.appendChild(productReview);
         productContainer.appendChild(productContent);
 
+        /* Share icon functionality */
+        shareProduct.addEventListener("click", function() {
+            const link = window.location.href;
+            navigator.clipboard.writeText(link).then(function() {
+                alert("Product link copied!");
+            });
+        });
+
+        /* Add to cart functionality */
+        addToCartButton.addEventListener("click", function() {
+            addToCart(product);
+        })
 
     } catch (error) {
         console.error("Error fetching product", error);
@@ -109,8 +121,25 @@ async function getProductById() {
 
 getProductById();
 
+//function isUserLoggedIn() {
+    //const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    //return loggedInUser;
+//}
+
 function addToCart (product) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push(product);
-    localStorage.setItem("cart", JSON.stringify(cart));
-}
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        console.log("Product added to cart", product);
+    };
+
+//function addToCart (product) {
+    //const loggedInUser = isUserLoggedIn();
+    //let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    //if (!loggedInUser) {
+        //window.location.href = "../html/account/login.html";
+    //} else {
+        //cart.push(product);
+        //localStorage.setItem("cart", JSON.stringify(cart));
+    //};
+//}

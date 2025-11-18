@@ -86,12 +86,12 @@ main {
     color: var(--text-color);
     font-size: var(--font-size-h3);
     display: grid;
-    padding: 0px 15px;
+    padding: 0 15px;
 }
 
 .thumbnail-title {
     font-weight: var(--font-weight-bold);
-    margin: 10px 0px 0px 0px;
+    margin-top: 10px;
     font-size: var(--font-size-h3);
 }
 
@@ -105,11 +105,11 @@ main {
 
 .thumbnail-price__discounted,
 .thumbnail-price {
-    margin: 10px 0px 15px 0px;
+    margin: 10px 0 15px 0;
 }
 
 .homepage-header {
-    margin: 50px 0px 0px 40px;
+    margin: 50px 0 0 40px;
 }
 
 a {

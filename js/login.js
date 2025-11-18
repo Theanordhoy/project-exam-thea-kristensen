@@ -1,3 +1,4 @@
+/* https://innosufiyan.hashnode.dev/create-signup-login-page-vanilla-javascript */
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
