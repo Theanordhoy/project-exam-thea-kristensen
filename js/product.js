@@ -121,25 +121,23 @@ async function getProductById() {
 
 getProductById();
 
-//function isUserLoggedIn() {
-    //const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    //return loggedInUser;
-//}
+function isUserLoggedIn() {
+    const token = localStorage.getItem("accessToken");
+    console.log("TOKEN I isUserLoggedIn():", token);
+    return token;
+}
 
 function addToCart (product) {
+    const loggedInUser = isUserLoggedIn();
+    console.log("loggedInUser i addToCart:", loggedInUser);
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        if(!loggedInUser) {
+            console.log("REDIRECTER fordi loggedInUser er:", loggedInUser);
+            window.location.href = "../html/account/login.html";
+            return;
+        } 
         cart.push(product);
         localStorage.setItem("cart", JSON.stringify(cart));
         console.log("Product added to cart", product);
+        
     };
-
-//function addToCart (product) {
-    //const loggedInUser = isUserLoggedIn();
-    //let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    //if (!loggedInUser) {
-        //window.location.href = "../html/account/login.html";
-    //} else {
-        //cart.push(product);
-        //localStorage.setItem("cart", JSON.stringify(cart));
-    //};
-//}

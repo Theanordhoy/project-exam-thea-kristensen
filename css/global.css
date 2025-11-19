@@ -232,11 +232,11 @@ h1,
     display: flex;
     flex-direction: column;
     color: var(--color-white);
-    padding: 20px 0px 40px 0px;
+    padding: 20px 0 40px 0;
 }
 
 .footer-mobile__header {
-    padding: 15px 0px;
+    padding: 15px 0;
     font-size: var(--font-size-body-small);
 }
 
@@ -246,12 +246,12 @@ h1,
     border-bottom: solid 1px var(--color-white);
     border-top: solid 1px var(--color-white);
     width: 90%;
-    padding: 10px 0px;
+    padding: 10px 0;
     cursor: pointer;
 }
 
 .footer-mobile__logo {
-    margin: 20px 0px;
+    margin: 20px 0;
 }
 
 /* Login and Signup pages */
@@ -280,8 +280,8 @@ h1,
 .register-form__input {
     height: 48px;
     border: 1px solid var(--accent-color);
-    border-radius: 0px;
-    padding: 0px 0px 0px 10px;
+    border-radius: 0;
+    padding-left: 10px;
     font-size: var(--font-size-body-large);
 }
 
@@ -289,7 +289,7 @@ h1,
 .register-h1 {
     margin: 0;
     text-align: center;
-    padding: 60px 0px;
+    padding: 60px 0;
 }
 
 .login-form__signup,
@@ -298,14 +298,14 @@ h1,
     padding: 12px;
     text-align: center;
     font-size: var(--font-size-h3);
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 .login-form__signup a,
 .register-form__login a {
     text-decoration: none;
     font-weight: var(--font-weight-semibold);
-    padding: 0px 0px 0px 5px;
+    padding-left: 5px;
 }
 
 .login-form__signup a,
@@ -315,15 +315,6 @@ h1,
 .register-form__login,
 .register-form__input::placeholder {
     color: var(--text-color);
-}
-
-.register-form__name-fields {
-    display: flex;
-    gap: 10px;
-}
-
-.register-input__name {
-    width: 183px;
 }
 
 /* Buttons */
@@ -343,6 +334,11 @@ h1,
 .login-button:hover,
 .register-button:hover {
     background-color: var(--secondary-color-hover);
+}
+
+.add-to-cart-button {
+    position: relative;
+    z-index: 10;
 }
 
 .register-form__login:hover,
