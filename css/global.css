@@ -69,7 +69,8 @@ h1,
 .product-info,
 .product-review,
 .login-form__input,
-.register-form__input {
+.register-form__input,
+.login-form__error-message {
     font-family: var(--secondary-font);
 }
 
@@ -359,4 +360,19 @@ h1,
     position: absolute;
     white-space: nowrap;
     width: 1px;
+}
+
+/* Error and Success Messages */ 
+.login-form__error-message,
+.register-form__error-message {
+    color: var(--error-color);
+    font-size: var(--font-size-body-small);
+    margin-top: 3px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.login-form__input:focus,
+.register-form__input:focus {
+    outline: 1px solid var(--success-color);
 }

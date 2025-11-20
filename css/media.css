@@ -73,7 +73,23 @@
         font-size: var(--font-size-h3);
     }
    
+    /* Login and Register */
+    .login-form,
+    .register-form,
+    .login-button,
+    .register-button {
+        width: 320px;
+    }
 
+    .login-button,
+    .register-button {
+        font-size: var(--font-size-h3);
+    }
+
+    .login-form__signup,
+    .register-form__login {
+        font-size: var(--font-size-body-large);
+    }
 }
 
 /* Mobile and Tablet */

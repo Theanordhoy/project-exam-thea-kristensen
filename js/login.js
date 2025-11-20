@@ -1,5 +1,7 @@
 /* https://innosufiyan.hashnode.dev/create-signup-login-page-vanilla-javascript */
 /* https://noroff-my.sharepoint.com/personal/talitha_kruger_noroff_no/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftalitha%5Fkruger%5Fnoroff%5Fno%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files%2FGuide%20to%20API%20Authentication%201%205%2Epdf&parent=%2Fpersonal%2Ftalitha%5Fkruger%5Fnoroff%5Fno%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files&ga=1 */
+import { isValidEmail, isValidPassword } from "./validators.js";
+
 document.getElementById("loginForm").addEventListener("submit", async function(event) {
     event.preventDefault();
 
@@ -40,4 +42,29 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         alert("Something went wrong. Please try again later.");
     }
 });
+
+const email = document.getElementById("email");
+const emailError = document.getElementById("emailError");
+email.setAttribute("aria-describedby", "emailError");
+const password = document.getElementById("password");
+const passwordError = document.getElementById("passwordError");
+password.setAttribute("aria-describedby", "passwordError");
+
+/* Live validation */
+email.addEventListener("blur", function() {
+    if (!isValidEmail(email.value)) {
+        emailError.textContent = "Please enter a valid email address.";
+    } else {
+        emailError.textContent = "";
+    }
+});
+
+password.addEventListener("blur", function() {
+    if (!isValidPassword(password.value)) {
+        passwordError.textContent = "Password must be at least 8 characters.";
+    } else {
+        passwordError.textContent = "";
+    }
+});
+
     
