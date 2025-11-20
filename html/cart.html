@@ -40,19 +40,21 @@
             </div>
         </nav>
     </header>
-    <main>
-        <h1>Cart</h1>
-        <div class="cart">
+    <main class="cart">
+        <div class="cart-items-container">
+            <h1 class="cart-h1">Cart</h1>
             <div class="cart-items"></div>
-            <div class="cart-order-summary">
-                <h2>Order summary</h2>
-                <div>
+        </div>
+        <div class="cart-order-summary">
+            <h2 class="cart-order-summary__h2">Order summary</h2>
+            <div>
+                <div class="cart-order-summary__subtotal-container">
                     <p class="cart-order-summary__subtotal"></p>
                     <p>Shipping $0</p>
-                    <p class="cart-order-summary__total"></p>
                 </div>
-                <a href="../html/checkout.html" class="cart-order-summary__checkout-button">Checkout</a>
+                <p class="cart-order-summary__total"></p>
             </div>
+            <a href="../html/checkout.html" class="cart-order-summary__checkout-button">Checkout</a>
         </div>
     </main>
     <footer>
