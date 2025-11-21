@@ -1,5 +1,6 @@
 const apiUrl = "https://v2.api.noroff.dev/online-shop";
 const productContainer = document.querySelector("#productContainer");
+import { showAlert } from "./alert.js";
 
 async function getProductById() {
     const params = new URLSearchParams(window.location.search);
@@ -105,7 +106,7 @@ async function getProductById() {
         shareProduct.addEventListener("click", function() {
             const link = window.location.href;
             navigator.clipboard.writeText(link).then(function() {
-                alert("Product link copied!");
+                showAlert("Product link copied to clipboard!", "success", 3000);
             });
         });
 
@@ -138,6 +139,25 @@ function addToCart (product) {
         } 
         cart.push(product);
         localStorage.setItem("cart", JSON.stringify(cart));
-        console.log("Product added to cart", product);
-        
-    };
+        updateCartCount();
+        showAlert(`${product.title} has been added to your cart!`, "success", 3000);
+};
+
+/* Update cart count in the header */
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCount = document.querySelector(".cart-count");
+    const count = cart.length;
+
+    if (cartCount) {
+        if (count > 0) {
+            cartCount.textContent = count;
+            cartCount.style.display = "inline";
+        } else {
+            cartCount.textContent = "";
+            cartCount.style.display = "none";
+        }
+    }
+}
+
+updateCartCount();
