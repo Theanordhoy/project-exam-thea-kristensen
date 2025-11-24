@@ -133,6 +133,11 @@
     .cart-order-summary__checkout-button {
         width: 320px;
     }
+
+    .cart-clear-button {
+        font-size: var(--font-size-body-medium);
+        padding: 5px 15px;
+    }
 }
 
 /* Mobile and Tablet */
@@ -163,6 +168,10 @@
     .cart-h1 {
         align-self: start;
         margin-bottom: 0;
+    }
+
+    .cart-clear-button {
+        margin: 0 0 20px 15px;
     }
 
 }

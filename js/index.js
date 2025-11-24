@@ -2,8 +2,10 @@
 const apiUrl = "https://v2.api.noroff.dev/online-shop";
 const thumbnail = document.querySelector("#thumbnail");
 const heroCarousel = document.querySelector("#heroCarousel");
+import { showLoading, hideLoading } from "./loading.js";
 
 async function getProducts() {
+    showLoading();
     try {
         // Send a GET request to the API endpoint
         const response = await fetch(apiUrl);
@@ -109,6 +111,8 @@ async function getProducts() {
 
     } catch (error) {
         console.error("Error fetching API data:", error);
+    } finally {
+        hideLoading();
     }
 }
 

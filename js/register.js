@@ -1,11 +1,13 @@
 /* https://innosufiyan.hashnode.dev/create-signup-login-page-vanilla-javascript */
 /* https://noroff-my.sharepoint.com/personal/talitha_kruger_noroff_no/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftalitha%5Fkruger%5Fnoroff%5Fno%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files%2FGuide%20to%20API%20Authentication%201%205%2Epdf&parent=%2Fpersonal%2Ftalitha%5Fkruger%5Fnoroff%5Fno%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files&ga=1 */
 import { isValidName, isValidEmail, isValidPassword } from "./validators.js";
+import { showLoading, hideLoading } from "./loading.js";
 
 document
   .getElementById("registerForm")
   .addEventListener("submit", async function (event) {
     event.preventDefault();
+    showLoading();
 
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
@@ -41,6 +43,8 @@ document
     } catch (error) {
       console.error("Registration error:", error);
       alert("Something went wrong. Please try again later.");
+    } finally {
+      hideLoading();
     }
   });
  

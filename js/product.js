@@ -1,8 +1,10 @@
 const apiUrl = "https://v2.api.noroff.dev/online-shop";
 const productContainer = document.querySelector("#productContainer");
 import { showAlert } from "./alert.js";
+import { showLoading, hideLoading } from "./loading.js";
 
 async function getProductById() {
+    showLoading ();
     const params = new URLSearchParams(window.location.search);
     const productId = params.get("id");
 
@@ -117,6 +119,8 @@ async function getProductById() {
 
     } catch (error) {
         console.error("Error fetching product", error);
+    } finally {
+        hideLoading();
     }
 }
 
