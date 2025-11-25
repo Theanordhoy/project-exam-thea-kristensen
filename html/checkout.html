@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout</title>
     <script src="../js/checkout.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/309152690f.js" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io-3/apple-touch-icon.png">
@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io-3/favicon-16x16.png">
     <link rel="manifest" href="../favicon_io-3/site.webmanifest">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/checkout.css">
     <link rel="stylesheet" href="../css/media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,25 +23,105 @@
             <label for="menu-checkbox" class="header-hamburger__menu" id="hamburger-icon"><i class="fa-solid fa-bars"></i></label>
             <input type="checkbox" id="menu-checkbox">
             <ul class="header-categories">
-                <li><a href="html/coming-soon.html" class="header-categories__option">Beauty</a></li>
-                <li><a href="html/coming-soon.html" class="header-categories__option">Technology</a></li>
-                <li><a href="html/coming-soon.html" class="header-categories__option">Shoes</a></li>
-                <li><a href="html/coming-soon.html" class="header-categories__option">Accessories</a></li>
-                <li><a href="html/coming-soon.html" class="header-categories__option">Lunex Living</a></li>
+                <li><a href="/html/coming-soon.html" class="header-categories__option">Beauty</a></li>
+                <li><a href="/html/coming-soon.html" class="header-categories__option">Technology</a></li>
+                <li><a href="/html/coming-soon.html" class="header-categories__option">Shoes</a></li>
+                <li><a href="/html/coming-soon.html" class="header-categories__option">Accessories</a></li>
+                <li><a href="/html/coming-soon.html" class="header-categories__option">Lunex Living</a></li>
             </ul>
             <a href="../index.html" class="header-logo">
                 <span class="header-logo-1">lunex</span>
                 <span class="header-logo-2">living</span> 
             </a>
             <div class="header-icons">
-                <a href="html/coming-soon.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="html/account/login.html"><i class="fa-solid fa-user"></i></a>
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span></a>
+                <a href="/html/coming-soon.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="/html/account/login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="/html/cart.html"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span></a>
             </div>
         </nav>
     </header>
-    <main>
-
+    <main class="checkout">
+        <section class="checkout-form">
+            <form>
+                <h1>Checkout</h1>
+                <fieldset class="checkout-form__fieldset">
+                    <legend>Billing info</legend>
+                    <div class="checkout-form__field">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" class="checkout-form-input" required>
+                    </div>
+                    <div class="checkout-form-field__row">
+                        <div class="checkout-form__field">
+                            <label for="firstname" class="sr-only">First name</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="First name" class="checkout-form-input__small" required>
+                        </div>
+                        <div class="checkout-form__field">
+                            <label for="lastname" class="sr-only">Last name</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Last name" class="checkout-form-input__small" required>
+                        </div>
+                    </div>
+                    <div class="checkout-form__field">
+                        <label for="phonenumber" class="sr-only">Phone number</label>
+                        <input type="tel" id="phonenumber" name="phonenumber" placeholder="Phone number" class="checkout-form-input" required>
+                    </div>
+                    <div class="checkout-form__field">
+                        <label for="address" class="sr-only">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Address" class="checkout-form-input" required>
+                    </div>
+                    <div class="checkout-form-field__row">
+                        <div class="checkout-form__field">
+                            <label for="postalcode" class="sr-only">Postal code</label>
+                            <input type="number" id="postalcode" name="postalcode" placeholder="Postal code" class="checkout-form-input__small" required>
+                        </div>
+                        <div class="checkout-form__field">
+                            <label for="city" class="sr-only">City</label>
+                            <input type="text" id="city" name="city" placeholder="City" class="checkout-form-input__small" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="checkout-form__fieldset">
+                    <legend>Payment info</legend>
+                    <div class="checkout-form-payment">
+                        <input type="radio" id="card" name="card" value="Credit card">
+                        <label for="card">Credit card</label>
+                        <div class="checkout-card-info">
+                            <div>
+                                <label for="nameoncard" class="sr-only">Name on card</label>
+                                <input type="text" id="nameoncard" name="nameoncard" placeholder="Name on card" class="checkout-form-payment__card checkout-form-payment__big" required>
+                            </div>
+                            <div>
+                                <label for="cardnumber" class="sr-only">Card number</label>
+                                <input type="text" id="cardnumber" name="cardnumber" inputmode="numeric" placeholder="Card number" class="checkout-form-payment__card checkout-form-payment__big" required>
+                            </div>
+                            <div class="checkout-form-field__row">
+                                <div>
+                                    <label for="expirationdate" class="sr-only">Exp. date</label>
+                                    <input type="text" id="expirationdate" name="expirationdate" inputmode="numeric" placeholder="Exp. date" class="checkout-form-payment__card checkout-form-payment__small" required>
+                                </div>
+                                <div>
+                                    <label for="cvv" class="sr-only">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" inputmode="numeric" placeholder="CVV" class="checkout-form-payment__card checkout-form-payment__small" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-form-payment">
+                        <input type="radio" id="klarna" name="klarna" value="Klarna">
+                        <label for="klarna">Klarna</label>
+                    </div>
+                </fieldset>
+                <a href="/html/success.html">Place order</a>
+            </form>
+        </section>
+        <section class="checkout-order-summary">
+            <h2 class="checkout-order-summary__h2">Order summary</h2>
+            <div class="checkout-order-summary__items"></div>
+            <div class="checkout-order-summary__subtotal-container">
+                <p class="checkout-order-summary__subtotal"></p>
+                <p>Shipping $0</p>
+            </div>
+            <div class="checkout-order-summary__total"></div>
+        </section>
     </main>
     <footer>
         <!-- Footer desktop-->  
@@ -52,19 +133,19 @@
             <div class="footer-follow-us">
                 <p class="footer-header">Follow us</p>
                 <div class="footer-socials">
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-tiktok"></i>TikTok</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-youtube"></i>YouTube</a>
+                    <a href="/html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                    <a href="/html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                    <a href="/html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-tiktok"></i>TikTok</a>
+                    <a href="/html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-youtube"></i>YouTube</a>
                 </div>
             </div>
             <div class="footer-about-us">
                 <p class="footer-header">About us</p>
                 <div class="footer-options">
-                    <a href="html/coming-soon.html" class="footer-option">Lunex Living</a>
-                    <a href="html/coming-soon.html" class="footer-option">FAQ</a>
-                    <a href="html/coming-soon.html" class="footer-option">Returns</a>
-                    <a href="html/coming-soon.html" class="footer-option">Terms and conditions</a>
+                    <a href="/html/coming-soon.html" class="footer-option">Lunex Living</a>
+                    <a href="/html/coming-soon.html" class="footer-option">FAQ</a>
+                    <a href="/html/coming-soon.html" class="footer-option">Returns</a>
+                    <a href="/html/coming-soon.html" class="footer-option">Terms and conditions</a>
                 </div>
             </div>
         </div>
@@ -77,19 +158,19 @@
             <details class="footer-mobile__dropdown">
                 <summary class="footer-header footer-mobile__header">Follow us</summary>
                 <div class="footer-socials">
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-tiktok"></i>TikTok</a>
-                    <a href="html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-youtube"></i>YouTube</a>
+                    <a href="/html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                    <a href="/html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                    <a href="/html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-tiktok"></i>TikTok</a>
+                    <a href="/html/coming-soon.html" class="footer-icon"><i class="fa-brands fa-youtube"></i>YouTube</a>
                 </div>    
             </details>
             <details class="footer-mobile__dropdown">
                 <summary class="footer-header footer-mobile__header">About us</summary>
                 <div class="footer-options">
-                    <a href="html/coming-soon.html" class="footer-option">Lunex Living</a>
-                    <a href="html/coming-soon.html" class="footer-option">FAQ</a>
-                    <a href="html/coming-soon.html" class="footer-option">Returns</a>
-                    <a href="html/coming-soon.html" class="footer-option">Terms and conditions</a>
+                    <a href="/html/coming-soon.html" class="footer-option">Lunex Living</a>
+                    <a href="/html/coming-soon.html" class="footer-option">FAQ</a>
+                    <a href="/html/coming-soon.html" class="footer-option">Returns</a>
+                    <a href="/html/coming-soon.html" class="footer-option">Terms and conditions</a>
                 </div>
             </details>
         </div>

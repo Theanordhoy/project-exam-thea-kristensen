@@ -295,7 +295,10 @@ h1,
 }
 
 .login-form__input,
-.register-form__input {
+.register-form__input,
+.checkout-form-input,
+.checkout-form-input__small,
+.checkout-form-payment__card {
     height: 48px;
     border: 1px solid var(--accent-color);
     border-radius: 0;
@@ -333,6 +336,47 @@ h1,
 .register-form__login,
 .register-form__input::placeholder {
     color: var(--text-color);
+}
+
+/* Cart and checkout page */
+.cart-product__image,
+.checkout-item-image {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+}
+
+.cart-product,
+.checkout-order-summary__content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cart-order-summary,
+.checkout-order-summary {
+    background-color: var(--primary-color);
+    padding: 60px 40px;
+    width: auto;
+    align-items: center;
+}
+
+.cart-order-summary__h2,
+.checkout-order-summary__h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-regular);
+    margin: 20px 0 0 0;
+    padding-bottom: 5px;
+}
+
+.cart-order-summary__subtotal-container,
+.cart-order-summary__h2,
+.cart-order-summary__total,
+.checkout-order-summary__h2,
+.checkout-order-summary__subtotal-container,
+.checkout-order-summary__total {
+    border-bottom: 1px solid var(--accent-color);
+    width: 400px;
 }
 
 /* Buttons */

@@ -1,0 +1,56 @@
+.checkout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.checkout-item-image {
+    height: 110px;
+    width: 110px;
+}
+
+.checkout-order-summary__subtotal-container {
+    border-top: 1px solid var(--accent-color);
+}
+
+.checkout-form__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: none;
+}
+
+.checkout-form-field__row {
+    display: flex;
+    gap: 12px;
+}
+
+.checkout-form-input,
+.checkout-form-payment {
+    width: 386px;
+}
+
+.checkout-form-input__small {
+    width: 180px;
+}
+
+.checkout-form-payment {
+    border: 1px solid var(--accent-color);
+    border-radius: 0;
+    padding-left: 10px;
+    font-size: var(--font-size-body-large);
+}
+
+.checkout-form-payment__big {
+    width: 356px;
+}
+
+.checkout-form-payment__small {
+    width: 165px;
+}
+
+.checkout-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
