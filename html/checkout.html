@@ -45,72 +45,83 @@
             <form>
                 <h1>Checkout</h1>
                 <fieldset class="checkout-form__fieldset">
-                    <legend>Billing info</legend>
+                    <legend class="checkout-form-heading">Billing info</legend>
                     <div class="checkout-form__field">
                         <label for="email" class="sr-only">Email</label>
                         <input type="email" id="email" name="email" placeholder="Email" class="checkout-form-input" required>
+                        <span id="emailError" class="checkout-error-message"></span>
                     </div>
                     <div class="checkout-form-field__row">
                         <div class="checkout-form__field">
                             <label for="firstname" class="sr-only">First name</label>
                             <input type="text" id="firstname" name="firstname" placeholder="First name" class="checkout-form-input__small" required>
+                            <span id="firstNameError" class="checkout-error-message"></span>
                         </div>
                         <div class="checkout-form__field">
                             <label for="lastname" class="sr-only">Last name</label>
                             <input type="text" id="lastname" name="lastname" placeholder="Last name" class="checkout-form-input__small" required>
+                            <span id="lastNameError" class="checkout-error-message"></span>
                         </div>
                     </div>
                     <div class="checkout-form__field">
                         <label for="phonenumber" class="sr-only">Phone number</label>
                         <input type="tel" id="phonenumber" name="phonenumber" placeholder="Phone number" class="checkout-form-input" required>
+                        <span id="phoneNumberError" class="checkout-error-message"></span>
                     </div>
                     <div class="checkout-form__field">
                         <label for="address" class="sr-only">Address</label>
                         <input type="text" id="address" name="address" placeholder="Address" class="checkout-form-input" required>
+                        <span id="addressError" class="checkout-error-message"></span>
                     </div>
                     <div class="checkout-form-field__row">
                         <div class="checkout-form__field">
                             <label for="postalcode" class="sr-only">Postal code</label>
                             <input type="number" id="postalcode" name="postalcode" placeholder="Postal code" class="checkout-form-input__small" required>
+                            <span id="postalCodeError" class="checkout-error-message"></span>
                         </div>
                         <div class="checkout-form__field">
                             <label for="city" class="sr-only">City</label>
                             <input type="text" id="city" name="city" placeholder="City" class="checkout-form-input__small" required>
+                            <span id="cityError" class="checkout-error-message"></span>
                         </div>
                     </div>
                 </fieldset>
                 <fieldset class="checkout-form__fieldset">
-                    <legend>Payment info</legend>
+                    <legend class="checkout-form-heading">Payment info</legend>
                     <div class="checkout-form-payment">
-                        <input type="radio" id="card" name="card" value="Credit card">
+                        <input type="radio" id="card" name="payment" value="Credit card">
                         <label for="card">Credit card</label>
                         <div class="checkout-card-info">
                             <div>
                                 <label for="nameoncard" class="sr-only">Name on card</label>
                                 <input type="text" id="nameoncard" name="nameoncard" placeholder="Name on card" class="checkout-form-payment__card checkout-form-payment__big" required>
+                                <span id="nameOnCardError" class="checkout-error-message"></span>
                             </div>
                             <div>
                                 <label for="cardnumber" class="sr-only">Card number</label>
                                 <input type="text" id="cardnumber" name="cardnumber" inputmode="numeric" placeholder="Card number" class="checkout-form-payment__card checkout-form-payment__big" required>
+                                <span id="cardNumberError" class="checkout-error-message"></span>
                             </div>
                             <div class="checkout-form-field__row">
                                 <div>
                                     <label for="expirationdate" class="sr-only">Exp. date</label>
                                     <input type="text" id="expirationdate" name="expirationdate" inputmode="numeric" placeholder="Exp. date" class="checkout-form-payment__card checkout-form-payment__small" required>
+                                    <span id="expirationDateError" class="checkout-error-message"></span>
                                 </div>
                                 <div>
                                     <label for="cvv" class="sr-only">CVV</label>
                                     <input type="text" id="cvv" name="cvv" inputmode="numeric" placeholder="CVV" class="checkout-form-payment__card checkout-form-payment__small" required>
+                                    <span id="cvvError" class="checkout-error-message"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="checkout-form-payment">
-                        <input type="radio" id="klarna" name="klarna" value="Klarna">
+                        <input type="radio" id="klarna" name="payment" value="Klarna">
                         <label for="klarna">Klarna</label>
                     </div>
                 </fieldset>
-                <a href="/html/success.html">Place order</a>
+                <a href="/html/success.html" class="checkout-form__button">Place order</a>
             </form>
         </section>
         <section class="checkout-order-summary">

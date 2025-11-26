@@ -59,7 +59,9 @@ h1,
 .add-to-cart-button,
 .hero-title,
 .login-form__signup,
-.register-form__login {
+.register-form__login,
+.checkout-form-heading,
+.checkout-form__button {
     font-family: var(--primary-font);
 }
 
@@ -76,7 +78,10 @@ h1,
 .quantity-minus,
 .alert-success,
 .alert-error,
-.spinner-text   {
+.spinner-text,
+.checkout-form-input,
+.checkout-form-payment__card,
+.checkout   {
     font-family: var(--secondary-font);
 }
 
@@ -334,7 +339,10 @@ h1,
 .login-form__input::placeholder,
 .register-form__login a,
 .register-form__login,
-.register-form__input::placeholder {
+.register-form__input::placeholder,
+.checkout-form-input::placeholder,
+.checkout-form-input__small::placeholder,
+.checkout-form-payment__card::placeholder {
     color: var(--text-color);
 }
 
@@ -379,11 +387,37 @@ h1,
     width: 400px;
 }
 
+.cart-order-summary__subtotal-container,
+.checkout-order-summary__subtotal-container,
+.checkout-order-summary__title  {
+    font-size: var(--font-size-body-large);
+}
+
+.cart-product__discounted-price,
+.cart-order-summary__total,
+.checkout-order-summary__total,
+.checkout-order-summary__title {
+    font-weight: var(--font-weight-semibold);
+}
+
+.cart-product__discounted-price,
+.cart-product__title,
+.cart-order-summary__total,
+.checkout-order-summary__total {
+    font-size: var(--font-size-h3);
+}
+
+.cart-order-summary__total,
+.checkout-order-summary__total {
+    padding-bottom: 5px;
+}
+
 /* Buttons */
 .add-to-cart-button,
 .login-button,
 .register-button,
-.cart-order-summary__checkout-button {
+.cart-order-summary__checkout-button,
+.checkout-form__button {
     background-color: var(--secondary-color);
     color: var(--color-white);
     font-weight: var(--font-weight-semibold);
@@ -423,6 +457,14 @@ h1,
     margin-left: 40px;
 }
 
+.cart-order-summary__checkout-button,
+.checkout-form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
 /* Screen reader only */
 /* https://css-tricks.com/inclusively-hidden/ */
 .sr-only:not(:focus):not(:active) {
@@ -437,7 +479,9 @@ h1,
 
 /* Error, Success Messages and loading */ 
 .login-form__error-message,
-.register-form__error-message {
+.register-form__error-message,
+.checkout-error-message {
+    display: flex;
     color: var(--error-color);
     font-size: var(--font-size-body-small);
     margin-top: 3px;
@@ -446,7 +490,10 @@ h1,
 }
 
 .login-form__input:focus,
-.register-form__input:focus {
+.register-form__input:focus, 
+.checkout-form-input:focus,
+.checkout-form-input__small:focus,
+.checkout-form-payment__card:focus {
     outline: 1px solid var(--success-color);
 }
 

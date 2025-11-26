@@ -1,6 +1,7 @@
 const orderSummaryContent = document.querySelector(".checkout-order-summary__items");
 const checkoutSubtotal = document.querySelector(".checkout-order-summary__subtotal");
 const checkoutTotal = document.querySelector(".checkout-order-summary__total");
+import { isValidEmail } from "./validators.js";
 
 let cart = [];
     try {
@@ -78,3 +79,37 @@ function updateCartCount() {
 }
 
 updateCartCount();
+
+/* Get input fields and error from form */
+const emailEl = document.getElementById("email");
+const firstNameEl = document.getElementById("firstname");
+const lastNameEl = document.getElementById("lastname");
+const phoneNumberEl = document.getElementById("phonenumber");
+const addressEl = document.getElementById("address");
+const postalCodeEl = document.getElementById("postalcode");
+const cityEl = document.getElementById("city");
+const nameOnCardEl = document.getElementById("nameoncard");
+const cardNumberEl = document.getElementById("cardnumber");
+const expirationDateEl = document.getElementById("expirationdate");
+const cvvEl = document.getElementById("cvv");
+
+const emailError = document.getElementById("emailError");
+const firstNameError = document.getElementById("firstNameError");
+const lastNameError = document.getElementById("lastNameError");
+const phoneNumberError = document.getElementById("phoneNumberError");
+const addressError = document.getElementById("addressError");
+const postalCodeError = document.getElementById("postalCodeError");
+const cityError = document.getElementById("cityError");
+const nameOnCardError = document.getElementById("nameOnCardError");
+const cardNumberError = document.getElementById("cardNumberError");
+const expirationDateError = document.getElementById("expirationDateError");
+const cvvError = document.getElementById("cvvError");
+
+/* Live validation */ 
+emailEl.addEventListener("blur", function() {
+    if (!isValidEmail(emailEl.value)) {
+        emailError.textContent = "Please enter a valid email address.";
+    } else {
+        emailError.textContent = "";
+    }
+});

@@ -39,32 +39,6 @@
     font-size: var(--font-size-h2);
 }
 
-.cart-product__discounted-price,
-.cart-order-summary__total {
-    font-weight: var(--font-weight-semibold);
-}
-
-.cart-product__discounted-price,
-.cart-product__title,
-.cart-order-summary__total {
-    font-size: var(--font-size-h3);
-}
-
-.cart-order-summary__subtotal-container {
-    font-size: var(--font-size-body-large);
-}
-
-.cart-order-summary__total {
-    padding-bottom: 5px;
-}
-
-.cart-order-summary__checkout-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
 .cart-items-container {
     flex: 1;
 }
