@@ -1,7 +1,7 @@
 const orderSummaryContent = document.querySelector(".checkout-order-summary__items");
 const checkoutSubtotal = document.querySelector(".checkout-order-summary__subtotal");
 const checkoutTotal = document.querySelector(".checkout-order-summary__total");
-import { isValidEmail } from "./validators.js";
+import { isValidEmail, isValidFirstName, isValidLastName, isValidPhoneNumber, isValidAddress, isValidPostalCode, isValidCity, isValidName, isValidCardNumber, isValidExpirationDate, isValidCvv } from "./validators.js";
 
 let cart = [];
     try {
@@ -113,3 +113,85 @@ emailEl.addEventListener("blur", function() {
         emailError.textContent = "";
     }
 });
+
+firstNameEl.addEventListener("blur", function() {
+    if (!isValidFirstName(firstNameEl.value)) {
+        firstNameError.textContent = "Please enter your first name";
+    } else {
+        firstNameError.textContent = "";
+    }
+});
+
+lastNameEl.addEventListener("blur", function() {
+    if (!isValidLastName(lastNameEl.value)) {
+        lastNameError.textContent = "Please enter your last name";
+    } else {
+        lastNameError.textContent = "";
+    }
+});
+
+phoneNumberEl.addEventListener("blur", function() {
+    if (!isValidPhoneNumber(phoneNumberEl.value)) {
+        phoneNumberError.textContent = "Please enter a phone number with 8 to 15 numbers";
+    } else {
+        phoneNumberError.textContent = "";
+    }
+});
+
+addressEl.addEventListener("blur", function () {
+    if (!isValidAddress(addressEl.value)) {
+        addressError.textContent = "Please enter your address";
+    } else {
+        addressError.textContent = "";
+    }
+});
+
+postalCodeEl.addEventListener("blur", function () {
+    if (!isValidPostalCode(postalCodeEl.value)) {
+        postalCodeError.textContent = "Please enter a valid postal code with 4 numbers";
+    } else {
+        postalCodeError.textContent = "";
+    }
+});
+
+cityEl.addEventListener("blur", function () {
+    if (!isValidCity(cityEl.value)) {
+        cityError.textContent = "Please enter your city";
+    } else {
+        cityError.textContent = "";
+    }
+});
+
+nameOnCardEl.addEventListener("blur", function () {
+    if (!isValidName(nameOnCardEl.value)) {
+        nameOnCardError.textContent = "Please enter the name on the card";
+    } else {
+        nameOnCardError.textContent = "";
+    }
+});
+
+cardNumberEl.addEventListener("blur", function () {
+    if (!isValidCardNumber(cardNumberEl.value)) {
+        cardNumberError.textContent = "Please enter your card number (16 numbers)";
+    } else {
+        cardNumberError.textContent = "";
+    }
+});
+
+expirationDateEl.addEventListener("blur", function () {
+    if (!isValidExpirationDate(expirationDateEl.value)) {
+        expirationDateError.textContent = "Please enter the expiration date (MM/YY)";
+    } else {
+        expirationDateError.textContent = "";
+    }
+});
+
+cvvEl.addEventListener("blur", function () {
+    if (!isValidCvv(cvvEl.value)) {
+        cvvError.textContent = "Please enter CVV (3 numbers)"
+    } else {
+        cvvError.textContent = "";
+    }
+});
+
+
