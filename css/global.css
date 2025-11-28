@@ -481,12 +481,13 @@ h1,
 .login-form__error-message,
 .register-form__error-message,
 .checkout-error-message {
-    display: flex;
+    display: block;
     color: var(--error-color);
     font-size: var(--font-size-body-small);
     margin-top: 3px;
     white-space: normal;
     word-break: break-word;
+    max-width: 100%;
 }
 
 .login-form__input:focus,

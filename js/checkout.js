@@ -194,4 +194,102 @@ cvvEl.addEventListener("blur", function () {
     }
 });
 
+/* Form submit function with validators */
+const placeOrderButton = document.querySelector(".checkout-form__button");
 
+placeOrderButton.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    if (!isValidEmail(emailEl.value)) {
+        emailError.textContent = "Please enter a valid email address.";
+        isValid = false;
+    } else {
+        emailError.textContent = "";
+    }
+
+    if (!isValidFirstName(firstNameEl.value)) {
+        firstNameError.textContent = "Please enter your first name";
+        isValid = false;
+    } else {
+        firstNameError.textContent = "";
+    }
+
+    if (!isValidLastName(lastNameEl.value)) {
+        lastNameError.textContent = "Please enter your last name";
+        isValid = false;
+    } else {
+        lastNameError.textContent = "";
+    }
+
+    if (!isValidPhoneNumber(phoneNumberEl.value)) {
+        phoneNumberError.textContent = "Please enter a phone number with 8 to 15 numbers";
+        isValid = false;
+    } else {
+        phoneNumberError.textContent = "";
+    }
+
+    if (!isValidAddress(addressEl.value)) {
+        addressError.textContent = "Please enter your address";
+        isValid = false;
+    } else {
+        addressError.textContent = "";
+    }
+
+    if (!isValidPostalCode(postalCodeEl.value)) {
+        postalCodeError.textContent = "Please enter a valid postal code with 4 numbers";
+        isValid = false;
+    } else {
+        postalCodeError.textContent = "";
+    }
+
+    if (!isValidCity(cityEl.value)) {
+        cityError.textContent = "Please enter your city";
+        isValid = false;
+    } else {
+        cityError.textContent = "";
+    }
+
+    const paymentMethod = document.querySelector("input[name='payment']:checked");
+    if (!paymentMethod) {
+        paymentError.textContent = "Please select a payment method.";
+        isValid = false;
+    } else {
+        paymentError.textContent = "";
+    }
+
+    if (paymentMethod && paymentMethod.value === "creditcard") {
+        if (!isValidName(nameOnCardEl.value)) {
+            nameOnCardError.textContent = "Please enter the name on the card";
+            isValid = false;
+        } else {
+            nameOnCardError.textContent = "";
+        }
+
+        if (!isValidCardNumber(cardNumberEl.value)) {
+            cardNumberError.textContent = "Please enter your card number (16 numbers)";
+            isValid = false;
+        } else {
+            cardNumberError.textContent = "";
+        }
+
+        if (!isValidExpirationDate(expirationDateEl.value)) {
+            expirationDateError.textContent = "Please enter the expiration date (MM/YY)";
+            isValid = false;
+        } else {
+            expirationDateError.textContent = "";
+        }
+
+        if (!isValidCvv(cvvEl.value)) {
+            cvvError.textContent = "Please enter CVV (3 numbers)"
+            isValid = false;
+        } else {
+            cvvError.textContent = "";
+        }
+    }
+
+    if (isValid) {
+        window.location.href = placeOrderButton.href;
+    }
+});
