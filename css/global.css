@@ -81,7 +81,8 @@ h1,
 .spinner-text,
 .checkout-form-input,
 .checkout-form-payment__card,
-.checkout   {
+.checkout,
+.cart-count   {
     font-family: var(--secondary-font);
 }
 
@@ -185,7 +186,10 @@ h1,
     color: var(--color-white);
     border-radius: 50%;
     padding: 3px 5px;
+    font-family: var(--secondary-font) !important;
     font-size: var(--font-size-mini);
+    font-weight: var(--font-weight-extra-light);
+    line-height: 1 !important;
     position: relative;
     bottom: -7px;
     left: -10px;
@@ -410,6 +414,43 @@ h1,
 .cart-order-summary__total,
 .checkout-order-summary__total {
     padding-bottom: 5px;
+}
+
+/* Success and coming soon page */ 
+.success-container,
+.coming-soon__container {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.success-container, 
+.success-info,
+.coming-soon__container,
+.coming-soon__info {
+    align-items: center;
+    display: flex;
+}
+
+.success-info,
+.coming-soon__info {
+    border: solid 1px var(--accent-color);
+    flex-direction: column;
+    padding: 50px 20px;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-body-large);
+    color: var(--text-color);
+    background-color: var(--color-white);
+}
+
+.fa-square-check {
+    font-size: 80px;
+    color: var(--secondary-color);
+}
+
+.success-info p,
+.coming-soon__info p {
+    margin-top: 10px;
 }
 
 /* Buttons */
