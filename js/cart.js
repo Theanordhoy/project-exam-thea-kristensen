@@ -107,7 +107,7 @@ function changeQuantity(productId, change) {
         localStorage.setItem("cart", JSON.stringify(cart));
     } catch (error) {
         console.error("Error updating cart", error);
-        showAlert("There was an error updating the cart. Please try again.");
+        showAlert("There was an error updating the cart. Please try again.", "error", 3000);
     } finally {
         updateCartCount();
         window.location.reload();

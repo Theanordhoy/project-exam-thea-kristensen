@@ -2,6 +2,7 @@
 /* https://noroff-my.sharepoint.com/personal/talitha_kruger_noroff_no/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftalitha%5Fkruger%5Fnoroff%5Fno%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files%2FGuide%20to%20API%20Authentication%201%205%2Epdf&parent=%2Fpersonal%2Ftalitha%5Fkruger%5Fnoroff%5Fno%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files&ga=1 */
 import { isValidEmail, isValidPassword } from "./validators.js";
 import { showLoading, hideLoading } from "./loading.js";
+import { showAlert } from "./alert.js";
 
 document.getElementById("loginForm").addEventListener("submit", async function(event) {
     event.preventDefault();
@@ -11,7 +12,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     const password = document.getElementById("password").value;
 
     if (!email || !password) {
-        alert("Please enter both email and password.");
+        showAlert("Please enter both email and password.", "error", 3000);
         return;
     }
 
@@ -31,16 +32,16 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         if (response.ok) {
             localStorage.setItem("accessToken", data.data.accessToken);
             localStorage.setItem("profileName", data.data.name);
-            alert("Login successful!");
+            showAlert("Login successful!", "success", 3000);
             setTimeout(() => {
                 window.location.href = "/index.html";
-            });
+            }, 1000);
         } else {
-            alert("Login failed: " + (data.errors?.[0]?.message || "Check console for details."));
+            showAlert("Login failed: " + (data.errors?.[0]?.message || "Check console for details."), "error", 3000);
         }
     } catch (error) {
         console.error("Login request failed:", error);
-        alert("Something went wrong. Please try again later.");
+        showAlert("Something went wrong. Please try again later.", "error", 3000);
     } finally {
         hideLoading();
     }

@@ -1,7 +1,8 @@
 /* https://innosufiyan.hashnode.dev/create-signup-login-page-vanilla-javascript */
 /* https://noroff-my.sharepoint.com/personal/talitha_kruger_noroff_no/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftalitha%5Fkruger%5Fnoroff%5Fno%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files%2FGuide%20to%20API%20Authentication%201%205%2Epdf&parent=%2Fpersonal%2Ftalitha%5Fkruger%5Fnoroff%5Fno%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files&ga=1 */
-import { isValidName, isValidEmail, isValidPassword } from "./validators.js";
+import { isValidFirstName, isValidEmail, isValidPassword } from "./validators.js";
 import { showLoading, hideLoading } from "./loading.js";
+import { showAlert } from "./alert.js";
 
 document
   .getElementById("registerForm")
@@ -32,11 +33,11 @@ document
       const data = await response.json();
 
       if (response.ok) {
-        alert("Registration successful! You can now log in.");
+        showAlert("Registration successful! You can now log in.", "success", 3000);
       } else {
-        alert(
+        showAlert(
           "Registration failed: " +
-            (data.errors?.[0]?.message || "Check console for details.")
+            (data.errors?.[0]?.message || "Check console for details."), "error", 3000
         );
       }
     } catch (error) {
@@ -59,8 +60,8 @@ document
 
   /* Live validation */
   name.addEventListener("blur", function () {
-    if (!isValidName(name.value)) {
-      nameError.textContent = "Please enter your first and last name.";
+    if (!isValidFirstName(name.value)) {
+      nameError.textContent = "Please enter your first name.";
     } else {
       nameError.textContent = "";
     }
@@ -68,7 +69,7 @@ document
 
   email.addEventListener("blur", function () {
     if (!isValidEmail(email.value)) {
-      emailError.textContent = "Please enter a valid email address.";
+      emailError.textContent = "Please enter a valid email address ending with @stud.noroff.no.";
     } else {
       emailError.textContent = "";
     }
