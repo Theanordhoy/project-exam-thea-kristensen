@@ -12,7 +12,6 @@ async function getProductById() {
         const response = await fetch(`${apiUrl}/${productId}`);
         const data = await response.json();
         const product = data.data;
-        console.log("Product data:", product);
 
         if (!product) {
             throw new Error(`Error loading product with ID ${productId}`);
@@ -128,16 +127,13 @@ getProductById();
 
 function isUserLoggedIn() {
     const token = localStorage.getItem("accessToken");
-    console.log("TOKEN I isUserLoggedIn():", token);
     return token;
 }
 
 function addToCart (product) {
     const loggedInUser = isUserLoggedIn();
-    console.log("loggedInUser i addToCart:", loggedInUser);
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
         if(!loggedInUser) {
-            console.log("REDIRECTER fordi loggedInUser er:", loggedInUser);
             window.location.href = "../html/account/login.html";
             return;
         } 

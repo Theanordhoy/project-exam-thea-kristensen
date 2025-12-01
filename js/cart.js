@@ -5,7 +5,6 @@ const totalPrice = document.querySelector(".cart-order-summary__total");
 let cart = [];
     try {
         cart = JSON.parse(localStorage.getItem("cart")) || [];
-        console.log("cart data", cart);
     } catch (error) {
         console.error("Error parsing cart data from localStorage", error);
     };

@@ -34,7 +34,6 @@ document
       if (response.ok) {
         alert("Registration successful! You can now log in.");
       } else {
-        console.log("Raw error response:", data);
         alert(
           "Registration failed: " +
             (data.errors?.[0]?.message || "Check console for details.")

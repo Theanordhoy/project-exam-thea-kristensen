@@ -36,7 +36,6 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
                 window.location.href = "/index.html";
             });
         } else {
-            console.log("Login error:", data);
             alert("Login failed: " + (data.errors?.[0]?.message || "Check console for details."));
         }
     } catch (error) {

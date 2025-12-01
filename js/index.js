@@ -14,9 +14,7 @@ async function getProducts() {
         throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log("API Data:", data);
         const products = data.data;
-        console.log("First product:", products[0]);
 
         // filter() from module 3 in JavaScript https://mollify.noroff.dev/content/feu1/javascript-1/module-3/array-methods?nav=course
         const carouselProducts = products.filter(product => product.title === "Black watch" || product.title === "Black headphones" || product.title === "White sneakers");
