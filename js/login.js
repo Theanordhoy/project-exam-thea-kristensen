@@ -34,7 +34,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
             localStorage.setItem("profileName", data.data.name);
             showAlert("Login successful!", "success", 3000);
             setTimeout(() => {
-                window.location.href = "../index.html";
+                window.location.href = "index.html";
             }, 1000);
         } else {
             showAlert("Login failed: " + (data.errors?.[0]?.message || "Check console for details."), "error", 3000);
