@@ -10,7 +10,7 @@ button.addEventListener("click", function() {
         window.location.href = "./html/account/login.html";
     } else {
         localStorage.removeItem("accessToken");
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
     }
 })
 
