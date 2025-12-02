@@ -78,7 +78,7 @@ async function getProducts() {
             const thumbnailCard = document.createElement("div");
             const thumbnailImage = document.createElement("img");
             const thumbnailContent = document.createElement("div");
-            const thumbnailTitle = document.createElement("h3");
+            const thumbnailTitle = document.createElement("h2");
             const thumbnailPrice = document.createElement("p");
             const thumbnailDiscountedPrice = document.createElement("p");
             const anchorButton = document.createElement("a");
