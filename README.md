@@ -4,6 +4,8 @@ Lunex Living is a online shop where you can buy different products. It's my proj
 
 ## Screenshot
 
+![Screenshot of landing page](/assets/Skjermbilde%202025-12-02%20kl.%2010.57.33%20am.png)
+
 ## Built with
 
 HTML
