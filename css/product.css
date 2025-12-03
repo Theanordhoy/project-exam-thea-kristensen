@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: auto auto;
     gap: 20px;
-    padding: 40px;
+    padding: 20px 40px 40px 40px;
     justify-content: center;
 }
 
@@ -19,6 +19,12 @@
     text-transform: capitalize;
     font-size: var(--font-size-xsmall);
 }
+
+.product-title {
+    margin: 5px 0 0 0;
+}
+
+
 
 .product-prices {
     display: flex;
@@ -70,4 +76,5 @@
 .product-rating {
     font-size: var(--font-size-body-medium);
     font-weight: var(--font-weight-extra-light);
+    margin: 0 0 30px 0;
 }

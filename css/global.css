@@ -83,7 +83,8 @@ h1,
 .checkout-form-payment__card,
 .checkout,
 .cart-count,
-.login-logout-button   {
+.login-logout-button,
+.nav-breadcrumbs {
     font-family: var(--secondary-font);
 }
 
@@ -523,6 +524,20 @@ h1,
     border: none;
     padding: 3px 10px;
     cursor: pointer;
+}
+
+.nav-breadcrumbs a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--font-size-body-small);
+}
+
+.fa-arrow-left {
+    margin-right: 5px;
+}
+
+.nav-breadcrumbs {
+    margin: 10px 0 0 10px;
 }
 
 /* Screen reader only */
