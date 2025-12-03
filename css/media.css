@@ -168,6 +168,11 @@
         width: 125px;
     }
 
+    /* Button */
+    .login-logout-button {
+        font-size: var(--font-size-body-small);
+    }
+
 }
 
 /* Mobile and Tablet */
