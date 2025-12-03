@@ -7,10 +7,10 @@ function isUserLoggedIn() {
 
 button.addEventListener("click", function() {
     if (!isUserLoggedIn()) {
-        window.location.href = "/html/account/login.html";
+        window.location.href = "/project-exam-thea-kristensen/html/account/login.html";
     } else {
         localStorage.removeItem("accessToken");
-        window.location.href = "/index.html";
+        window.location.href = "/project-exam-thea-kristensen/index.html";
     }
 })
 
