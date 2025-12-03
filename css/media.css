@@ -168,6 +168,10 @@
         width: 125px;
     }
 
+    .checkout-order-summary__content {
+        width: 320px;
+    }
+
     /* Button */
     .login-logout-button {
         font-size: var(--font-size-body-small);

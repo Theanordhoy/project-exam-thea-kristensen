@@ -91,3 +91,7 @@
 .checkout-order-summary__items {
     padding: 10px 0;
 }
+
+.checkout-order-summary__content {
+    width: 400px;
+}

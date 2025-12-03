@@ -160,6 +160,7 @@ h1,
     gap: 15px;
     align-items: center;
     justify-content: flex-end;
+    font-size: var(--font-size-body-xlarge);
 }
 
 .fa-solid {
@@ -177,23 +178,28 @@ h1,
 }
 
 .header-hamburger__menu {
+    display: flex;
     align-self: center;
     cursor: pointer;
-    font-size: var(--font-size-h1);
+    font-size: var(--font-size-h2);
 }
 
 .cart-count {
     background-color: var(--error-color);
     color: var(--color-white);
     border-radius: 50%;
-    padding: 3px 5px;
+    padding: 3px 6px;
     font-family: var(--secondary-font) !important;
-    font-size: var(--font-size-mini);
+    font-size: var(--font-size-xsmall);
     font-weight: var(--font-weight-extra-light);
     line-height: 1 !important;
-    position: relative;
+    position: absolute;
     bottom: -7px;
-    left: -10px;
+    left: 10px;
+}
+
+.header-cart-icon {
+    position: relative;
 }
 
 /* Footer */
@@ -472,7 +478,9 @@ h1,
 .add-to-cart-button:hover,
 .login-button:hover,
 .register-button:hover,
-.cart-order-summary__checkout-button:hover {
+.cart-order-summary__checkout-button:hover,
+.checkout-form__button:hover,
+.login-logout-button:hover {
     background-color: var(--secondary-color-hover);
 }
 
@@ -484,7 +492,8 @@ h1,
 .register-form__login:hover,
 .register-form__login:hover a,
 .login-form__signup:hover,
-.login-form__signup:hover a {
+.login-form__signup:hover a,
+.cart-clear-button:hover {
     background-color: var(--accent-color-hover);
     color: var(--color-white); 
 }
