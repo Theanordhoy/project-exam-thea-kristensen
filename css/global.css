@@ -84,7 +84,8 @@ h1,
 .checkout,
 .cart-count,
 .login-logout-button,
-.nav-breadcrumbs {
+.nav-breadcrumbs,
+.coming-soon__info {
     font-family: var(--secondary-font);
 }
 
