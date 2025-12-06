@@ -29,10 +29,12 @@ if (cartItems.length === 0) {
 } else {
     cartItems.forEach (product => {
         const cartProduct = document.createElement("div");
+        const productContent = document.createElement("div");
         const productImage = document.createElement("img");
         const productInfo = document.createElement("div");
         const productTitle = document.createElement("h3");
         const productDiscountedPrice = document.createElement("p");
+        const updateCart = document.createElement("div");
         const productQuantity = document.createElement("div");
         const quantityPlus = document.createElement("button");
         const quantityMinus = document.createElement("button");
@@ -40,10 +42,12 @@ if (cartItems.length === 0) {
         const removeProduct = document.createElement("i");
 
         cartProduct.className = "cart-product";
+        productContent.className = "cart-product__content"
         productImage.className = "cart-product__image";
         productInfo.className = "cart-product__info";
         productTitle.className = "cart-product__title";
         productDiscountedPrice.className = "cart-product__discounted-price";
+        updateCart.className = "cart-product__update"
         productQuantity.className = "cart-product__quantity";
         quantityPlus.className = "quantity-plus";
         quantityMinus.className = "quantity-minus";
@@ -59,16 +63,18 @@ if (cartItems.length === 0) {
         quantityMinus.textContent = "-";
 
         cartItemsTotal += product.discountedPrice * product.quantity;
-
-        cartProduct.appendChild(productImage);
-        cartProduct.appendChild(productInfo);
+        
+        cartProduct.appendChild(productContent);
+        cartProduct.appendChild(updateCart);
+        productContent.appendChild(productImage);
+        productContent.appendChild(productInfo);
         productInfo.appendChild(productTitle);
         productInfo.appendChild(productDiscountedPrice);
-        cartProduct.appendChild(productQuantity);
+        updateCart.appendChild(productQuantity);
+        updateCart.appendChild(removeProduct);
         productQuantity.appendChild(quantityMinus);
         productQuantity.appendChild(quantityValue);
         productQuantity.appendChild(quantityPlus);
-        cartProduct.appendChild(removeProduct);
         cartContent.appendChild(cartProduct);
 
         /* Event listeners for quantity and removal of products */

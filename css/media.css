@@ -137,12 +137,12 @@
 
     .cart-order-summary__subtotal-container,
     .cart-order-summary__h2,
-    .cart-order-summary__total,
+    .cart-order-summary__total-container,
     .cart-order-summary__checkout-button,
     .checkout-form__button,
     .checkout-order-summary__h2,
     .checkout-order-summary__subtotal-container,
-    .checkout-order-summary__total {
+    .checkout-order-summary__total-container {
         width: 320px;
     }
 
