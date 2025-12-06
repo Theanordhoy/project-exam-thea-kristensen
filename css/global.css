@@ -395,7 +395,7 @@ h1,
 .cart-order-summary__total-container,
 .checkout-order-summary__h2,
 .checkout-order-summary__subtotal-container,
-.checkout-order-summary__total {
+.checkout-order-summary__total-container {
     border-bottom: 1px solid var(--accent-color);
     width: 400px;
 }
@@ -408,7 +408,7 @@ h1,
 
 .cart-product__discounted-price,
 .cart-order-summary__total-container,
-.checkout-order-summary__total,
+.checkout-order-summary__total-container,
 .checkout-order-summary__title {
     font-weight: var(--font-weight-semibold);
 }
@@ -416,13 +416,33 @@ h1,
 .cart-product__discounted-price,
 .cart-product__title,
 .cart-order-summary__total-container,
-.checkout-order-summary__total {
+.checkout-order-summary__total-container {
     font-size: var(--font-size-h3);
 }
 
+.cart-order-summary__total-container,
+.cart-order-summary__subtotal-content,
+.cart-order-summary__shipping-content,
+.checkout-order-summary__subtotal-content,
+.checkout-order-summary__shipping-content,
+.checkout-order-summary__total-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-.checkout-order-summary__total {
-    padding-bottom: 5px;
+.cart-order-summary__total-container,
+.checkout-order-summary__total-container {
+    margin-bottom: 20px;
+}
+
+.cart-order-summary__subtotal-content,
+.cart-order-summary__subtotal-text,
+.cart-order-summary__subtotal, 
+.checkout-order-summary__subtotal-content,
+.checkout-order-summary__subtotal-text,
+.checkout-order-summary__subtotal{
+    margin-bottom: 0;
 }
 
 /* Success and coming soon page */ 

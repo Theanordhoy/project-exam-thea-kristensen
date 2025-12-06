@@ -59,24 +59,3 @@
 .cart-items {
     margin: 10px;
 }
-
-.cart-order-summary__total-container,
-.cart-order-summary__subtotal-content,
-.cart-order-summary__shipping-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.cart-order-summary__total-container {
-    margin-bottom: 20px;
-}
-
-.cart-order-summary__subtotal-content,
-.cart-order-summary__subtotal-text,
-.cart-order-summary__subtotal {
-    margin-bottom: 0;
-}
-
-
-

@@ -56,8 +56,8 @@ checkoutItems.forEach (product => {
 
 });
 
-checkoutSubtotal.textContent = `Subtotal $${checkoutItemsTotal.toFixed(2)}`;
-checkoutTotal.textContent = `Total $${checkoutItemsTotal.toFixed(2)}`;
+checkoutSubtotal.textContent = `$${checkoutItemsTotal.toFixed(2)}`;
+checkoutTotal.textContent = `$${checkoutItemsTotal.toFixed(2)}`;
 
 
 /* Update cart count in the header */
