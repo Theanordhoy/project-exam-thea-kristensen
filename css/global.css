@@ -392,7 +392,7 @@ h1,
 
 .cart-order-summary__subtotal-container,
 .cart-order-summary__h2,
-.cart-order-summary__total,
+.cart-order-summary__total-container,
 .checkout-order-summary__h2,
 .checkout-order-summary__subtotal-container,
 .checkout-order-summary__total {
@@ -407,7 +407,7 @@ h1,
 }
 
 .cart-product__discounted-price,
-.cart-order-summary__total,
+.cart-order-summary__total-container,
 .checkout-order-summary__total,
 .checkout-order-summary__title {
     font-weight: var(--font-weight-semibold);
@@ -415,12 +415,12 @@ h1,
 
 .cart-product__discounted-price,
 .cart-product__title,
-.cart-order-summary__total,
+.cart-order-summary__total-container,
 .checkout-order-summary__total {
     font-size: var(--font-size-h3);
 }
 
-.cart-order-summary__total,
+
 .checkout-order-summary__total {
     padding-bottom: 5px;
 }

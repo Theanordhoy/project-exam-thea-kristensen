@@ -87,8 +87,8 @@ if (cartItems.length === 0) {
     })
 }
 
-totalPrice.textContent = `Total $${cartItemsTotal.toFixed(2)}`;
-cartSubtotal.textContent = `Subtotal $${cartItemsTotal.toFixed(2)}`;
+totalPrice.textContent = `$${cartItemsTotal.toFixed(2)}`;
+cartSubtotal.textContent = `$${cartItemsTotal.toFixed(2)}`;
 
 /* Change product quantity in cart */
 function changeQuantity(productId, change) {
