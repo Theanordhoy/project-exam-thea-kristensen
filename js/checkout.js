@@ -147,7 +147,7 @@ addressEl.addEventListener("blur", function () {
 
 postalCodeEl.addEventListener("blur", function () {
     if (!isValidPostalCode(postalCodeEl.value)) {
-        postalCodeError.textContent = "Please enter a valid postal code with 4 numbers";
+        postalCodeError.textContent = "Enter your postal code (4 numbers)";
     } else {
         postalCodeError.textContent = "";
     }
